@@ -19,15 +19,17 @@ void Coordinate(int* mass[], int* mass2[], int s1, int s2); //Ввод игро�
 void checkWin(int* board[], int s1, int s2); //проверка на победу
 
 int main() {
-	int fa;
+
+	int difficult_user; //сложность выбранная игроком
+	//Начальное меню
 	cout << "\t\tMember GAME\n";
 	cout << "*1 - board 4x2\n";
 	cout << "**2 - board 4x4\n";
 	cout << "***3 - board 6x4\n";
 	cout << "chose mode of difficult:\n";
-	cin >> fa;
+	cin >> difficult_user;
 
-	createArr(fa);
+	createArr(difficult_user);
 	printBoard(board, s1, s2);
 
 
