@@ -4,19 +4,19 @@
 #include <iostream>
 #include <ctime>
 using namespace std;
-int** arr;
-int** board;
-int s1, s2;
-bool flag = true;
+int** arr; //Массив хранящий значения карточек
+int** board; //"Визуальный" массив
+int s1, s2; //Размер массива
+bool flag = true; //Двигатель процесса игры
 int numberOfCard = 0;
 HANDLE hconsole;
 
-void fillArr(int* arr[], int s1, int s2);
-void createArr(int difficult);
-void printBoard(int* arr[], int s1, int s2);
-void replacement(int x, int y, int* numbers[], int* board[], int mode);
-void Coordinate(int* mass[], int* mass2[], int s1, int s2);
-void checkWin(int* board[], int s1, int s2);
+void fillArr(int* arr[], int s1, int s2); //заполнение массива
+void createArr(int difficult); //создание массива
+void printBoard(int* arr[], int s1, int s2); //Воспроизведение доски 
+void replacement(int x, int y, int* numbers[], int* board[], int mode); //"Переворот" карточки
+void Coordinate(int* mass[], int* mass2[], int s1, int s2); //Ввод игроком координат карточек
+void checkWin(int* board[], int s1, int s2); //проверка на победу
 
 int main() {
 	int fa;
